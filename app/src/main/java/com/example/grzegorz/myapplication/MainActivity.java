@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(stringFromJNI());
 
         this.progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
+        //Ustawianie maksymalnej pozycji paska
         this.progressBar2.setMax(100);
+        //Wyzerowanie paska postepu przy starcie aplikacji
         this.progressBar2.setProgress(0);
         Button startButton = (Button) findViewById(R.id.button);
         // perform click event on button
@@ -43,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setProgressValue() {
+        // przypisanie zwięksoznej wartości do zmienej
         this.progress += 10;
+        // Ten warunek ustawian pasek na pozycję 0
         if(this.progress >= 110) {
             this.progress = 0;
         }
